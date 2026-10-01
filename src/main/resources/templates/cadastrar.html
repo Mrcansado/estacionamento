@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar veículo - Estacionamento</title>
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#0f172a,#1e3a8a);min-height:100vh;color:#111827}
+    .container{width:100%;max-width:460px;margin:50px auto;padding:20px}
+    .card{background:#fff;border-radius:18px;padding:32px;box-shadow:0 18px 45px rgba(0,0,0,.25)}
+    h1,h2{text-align:center;color:#0f172a;margin-bottom:10px}
+    .subtitle{text-align:center;color:#64748b;margin-bottom:24px}
+    label{display:block;font-weight:600;font-size:14px;margin:13px 0 7px;color:#334155}
+    input{width:100%;padding:12px 14px;border:1px solid #cbd5e1;border-radius:10px;font-size:15px;outline:none}
+    input:focus{border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+    button,.btn{display:block;width:100%;border:none;border-radius:10px;padding:13px 16px;margin-top:20px;background:#2563eb;color:#fff;font-weight:700;font-size:15px;cursor:pointer;text-align:center;text-decoration:none}
+    button:hover,.btn:hover{background:#1d4ed8}
+    .link{text-align:center;margin-top:18px;color:#64748b;font-size:14px}
+    .link a{color:#2563eb;text-decoration:none;font-weight:600}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <h2>Entrada de veículo</h2>
+    <p class="subtitle">Registre as informações do veículo</p>
+
+    <form method="post" action="/veiculo/cadastrar">
+      <label for="placa">Placa</label>
+      <input type="text" id="placa" name="placa" placeholder="ABC1D23" maxlength="7" required>
+
+      <label for="modelo">Modelo</label>
+      <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo do veículo" required>
+
+      <label for="cor">Cor</label>
+      <input type="text" id="cor" name="cor" placeholder="Digite a cor do veículo" required>
+
+      <label for="observacoes">Observações</label>
+      <input type="text" id="observacoes" name="observacoes" placeholder="Observações">
+
+      <button type="submit">Registrar</button>
+    </form>
+
+    <p class="link"><a href="/painel">Voltar ao painel</a></p>
+  </div>
+</div>
+</body>
+</html>
